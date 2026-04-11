@@ -1,0 +1,74 @@
+install (docker desktop from store ) and login into docker website 
+
+
+docker desktop
+docker (command on docker desktop to check wether docker is install successfully)
+docker pull hello-world
+docker run hello-world
+
+
+
+----------------------------------------------------creating image from flask file(table)--------------------------------------
+
+------------------------------------------------------------vscode cha commands----------------------------------------------
+
+app.run(host="0.0.0.0")
+
+dockerfile(
+#base image 
+FROM python:3.9
+
+#workdir
+WORKDIR /app
+
+#copy
+COPY . .
+
+#run 
+RUN pip install -r req.txt
+
+#port
+EXPOSE 5000
+
+#command
+CMD ["python","app.py"]
+)
+
+docker build -t shubhamtidke826/table .                       (file will come in image section of docker desktop)
+
+docker run -p 8000:5000 shubhamtidke826/table                  (check contain made is working properly or not)
+
+
+
+
+----------------------------------------------------creating image for laptop price predictor------------------------------------------------
+------------------------------------------------------------vscode cha commands----------------------------------------------
+
+dockerfile(
+FROM python:3.7
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 8501                                                   (port of streamlit)
+
+CMD ["streamlit", "run", "app.py"]
+
+)
+
+
+ docker build -t shubhamtidke826/laptopp .                    (file will come in image section of docker desktop)
+
+docker run -p 8501:8501 shubhamtidke826/laptop             (use http://localhost:8501/ on browser)
+
+
+
+create new terminal
+
+ docker login
+docker push shubhamtidke826/laptop                                 (push on docker hub -browser)
+
+

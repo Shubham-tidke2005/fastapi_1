@@ -1,0 +1,22 @@
+python -m venv myenv
+myenv/Scripts/activate
+deactivate                    #close virtual env
+
+pip install packages
+pip list > req.txt
+pip freeze > requirements.txt
+
+
+#for geting the url 
+uvicorn filename:app --reload    #start uvicorn 
+Ctrl + C                     #terminal to stop uvicorn 
+
+
+url/deco_name
+url/docs                #for documentation
+
+
+pip install -r requirements.txt
+
+
+python -m streamlit run file_name.py
