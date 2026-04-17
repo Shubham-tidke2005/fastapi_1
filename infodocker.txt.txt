@@ -1,4 +1,4 @@
-install (docker desktop from store ) and login into docker website ....
+install (docker desktop from store ) and login into docker website .
 
 
 docker desktop
